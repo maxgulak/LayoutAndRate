@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Регистрация</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+<body class="has-background-light">
+<div class="column">
+    <h5 class="title is-5">Регистрация</h5>
+    <div class="column">
+        <div class="column">
+            <div class="column is-one-fifth is-offset-1">
+                <label class="label">Вы регистрируетесь как</label>
+                <div class="columns is-3 is-one-fifth">
+                    <div class="is-flex">
+                        <div class="column">
+                            <div class="label">
+                                <label class="radio">
+                                    <input type="radio" name="choice_reg" value="customer" checked
+                                           onclick="ShowHideSite()">
+                                </label>
+                            </div>
+                            <div class="label">
+                                <div class="control">
+                                    <label class="radio">
+                                        <input type="radio" name="choice_reg" value="provider"
+                                               onclick="ShowHideSite()">
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column has-text-left">
+                            <label class="label">Покупатель</label>
+                            <label class="label">Поставщик</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="hero is-small">
+                <div class="hero-body"></div>
+            </section>
+        </div>
+        <div class="columns">
+            <div class="column is-2 has-text-right">
+                <label>Эл. почта</label>
+            </div>
+            <div class="column is-one-third">
+                <div class="control">
+                    <input class="input is-small" type="email">
+                </div>
+            </div>
+        </div>
+        <section>
+            <span class="label">Название организации</span>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>ИП или Юр. лицо</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>ИНН</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div>
+            <span class="label">Фактический адрес</span>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Ваш город</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Улица</label>
+                </div>
+                <div class="column is-2">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+                <div class="column is-1 has-text-centered">
+                    <label>Дом/стр.</label>
+                </div>
+                <div class="column is-2">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+                <div class="column is-1 has-text-centered">
+                    <label>Офис</label>
+                </div>
+                <div class="column is-1">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Телефон</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="field has-addons">
+                        <p class="button is-small is-static">+7</p>
+                        <p class="control">
+                            <input class="input is-small" type="tel">
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="columns" id="site" style="display: none;">
+                <div class="column is-2 has-text-right">
+                    <label>Сайт вашей компании</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input class="input is-small">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="column">
+        <span class="label">Виды деятельности</span>
+        <div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Магазин</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Региональная сеть магазинов</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Федеральная сеть магазинов</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Интернет-магазин</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Автосервис</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input type="checkbox">
+                    </div>
+                </div>
+            </div>
+            <div class="columns">
+                <div class="column is-2 has-text-right">
+                    <label>Прочее</label>
+                </div>
+                <div class="column is-one-third">
+                    <div class="control">
+                        <input class="input is-small" type="text">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="columns">
+        <div class="column is-2 has-text-right">
+            <input class="button is-link" type="submit" value="Отправить заявку" onclick="ShowHideNotification()">
+        </div>
+        <div class="column is-flex is-offset-7">
+            <div class="notification is-info" style="display: none;" id="notification">
+                <button class="delete" onclick="ShowHideNotification()"></button>
+                <p>Форма успешно отправлена</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
